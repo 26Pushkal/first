@@ -33,3 +33,8 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 
 echo "Jenkins installation and setup completed!"
+
+
+ssh admin@3.7.55.149 'docker pull pushkal26/new '
+ssh admin@3.7.55.149 'docker service ls | grep 'kajuj' && docker service rm 'kajuj''
+ssh admin@3.7.55.149 'docker run -d --name kajuj -p 8000:80 pushkal26/iacsd
